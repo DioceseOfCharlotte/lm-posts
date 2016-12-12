@@ -30,6 +30,9 @@ function lm_register_post_types() {
 	register_extended_post_type( 'lm-arden',
 		array(
 		'admin_cols' => array(
+		'course' => array(
+			'taxonomy' => 'arden_course',
+		),
 			'featured_image' => array(
 				'title'          => 'Image',
 				'featured_image' => 'abe-icon',
@@ -53,11 +56,16 @@ function lm_register_post_types() {
 		)
 	);
 
-	register_extended_taxonomy( 'arden_course', 'lm-arden' );
+	register_extended_taxonomy( 'arden_course', 'lm-arden', array(
+	    'meta_box' => 'radio',
+	) );
 
 		register_extended_post_type( 'lm-charlotte',
 			array(
 			'admin_cols' => array(
+			'course' => array(
+				'taxonomy' => 'charlotte_course',
+			),
 				'featured_image' => array(
 					'title'          => 'Image',
 					'featured_image' => 'abe-icon',
@@ -81,11 +89,16 @@ function lm_register_post_types() {
 			)
 		);
 
-		register_extended_taxonomy( 'charlotte_course', 'lm-charlotte' );
+		register_extended_taxonomy( 'charlotte_course', 'lm-charlotte', array(
+		    'meta_box' => 'radio',
+		) );
 
 		register_extended_post_type( 'lm-greensboro',
 			array(
 			'admin_cols' => array(
+			'course' => array(
+				'taxonomy' => 'greensboro_course',
+			),
 				'featured_image' => array(
 					'title'          => 'Image',
 					'featured_image' => 'abe-icon',
@@ -109,11 +122,16 @@ function lm_register_post_types() {
 		)
 		);
 
-		register_extended_taxonomy( 'greensboro_course', 'lm-greensboro' );
+		register_extended_taxonomy( 'greensboro_course', 'lm-greensboro', array(
+		    'meta_box' => 'radio',
+		) );
 
 		register_extended_post_type( 'lm-lenoir',
 			array(
 			'admin_cols' => array(
+			'course' => array(
+				'taxonomy' => 'lenoir_course',
+			),
 				'featured_image' => array(
 					'title'          => 'Image',
 					'featured_image' => 'abe-icon',
@@ -137,11 +155,16 @@ function lm_register_post_types() {
 		)
 		);
 
-		register_extended_taxonomy( 'lenoir_course', 'lm-lenoir' );
+		register_extended_taxonomy( 'lenoir_course', 'lm-lenoir', array(
+		    'meta_box' => 'radio',
+		) );
 
 		register_extended_post_type( 'lm-espanol',
 			array(
 			'admin_cols' => array(
+			'course' => array(
+				'taxonomy' => 'espanol_course',
+			),
 				'featured_image' => array(
 					'title'          => 'Image',
 					'featured_image' => 'abe-icon',
@@ -165,7 +188,9 @@ function lm_register_post_types() {
 		)
 		);
 
-		register_extended_taxonomy( 'espanol_course', 'lm-espanol' );
+		register_extended_taxonomy( 'espanol_course', 'lm-espanol', array(
+		    'meta_box' => 'radio',
+		) );
 
 		// register_extended_post_type( 'classroom',
 		// 	array(
